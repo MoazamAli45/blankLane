@@ -6,6 +6,7 @@ import { RiAccountCircleFill } from "react-icons/ri";
 import { useState } from "react";
 import { IoMenuOutline } from "react-icons/io5";
 import { IoMdCloseCircle } from "react-icons/io";
+import { Link } from "react-router-dom";
 const services = [
   { name: "City to City rides", path: "/city-to-city" },
   // { name: "Chaffeur hailing", path: "#" },
@@ -95,7 +96,7 @@ const Navbar = () => {
                         className="px-4 py-2 transition-all font-semibold hover:bg-[#F0F2F7] cursor-pointer"
                         key={index}
                       >
-                        <a href={service.path}>{service.name}</a>
+                        <Link to={service.path}>{service.name}</Link>
                       </li>
                     ))}
                   </ul>
@@ -220,7 +221,7 @@ const Navbar = () => {
                         className="px-4 py-2 transition-all font-semibold hover:bg-[#F0F2F7] cursor-pointer"
                         key={index}
                       >
-                        {service}
+                        <Link to={service.path}>{service.name}</Link>
                       </li>
                     ))}
                   </ul>
